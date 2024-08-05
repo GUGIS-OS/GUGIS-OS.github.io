@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #e0e0e0;
+    background: #121212;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background: #333;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Projects Section */
+.projects {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+}
+
+.project h3 {
+    margin: 0 0 10px;
+}
+
+/* About Section */
+.about {
+    padding: 2em 0;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #1e1e1e;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+.contact button {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #333;
+}
+
+/* Footer */
+footer {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    padding: 1em 0;
+    text-align: center;
+}
