@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -22,13 +22,16 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .logo {
-    height: 50px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 nav ul {
@@ -46,17 +49,28 @@ nav ul li {
 nav ul li a {
     color: #e0e0e0;
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #00aaff;
+    color: #fff;
 }
 
 /* Hero Section */
 .hero {
     background: #333;
-    padding: 2em 0;
+    padding: 4em 0;
     text-align: center;
+    animation: fadeIn 2s ease-out;
 }
 
 .hero h1 {
     margin: 0;
+    font-size: 2.5em;
+    animation: slideIn 1s ease-out;
 }
 
 .hero p {
@@ -65,8 +79,15 @@ nav ul li a {
 
 /* Projects Section */
 .projects {
-    padding: 2em 0;
+    padding: 4em 0;
+    background: #1e1e1e;
     text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.projects h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
 }
 
 .project-list {
@@ -77,12 +98,19 @@ nav ul li a {
 }
 
 .project {
-    background: #1e1e1e;
+    background: #2e2e2e;
     border: 1px solid #444;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 10px;
     padding: 20px;
-    width: 200px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.7);
 }
 
 .project h3 {
@@ -91,45 +119,13 @@ nav ul li a {
 
 /* About Section */
 .about {
-    padding: 2em 0;
+    padding: 4em 0;
     text-align: center;
+    animation: fadeIn 2s ease-out;
 }
 
-/* Contact Section */
-.contact {
-    padding: 2em 0;
-    text-align: center;
-}
-
-.contact form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.contact label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background: #1e1e1e;
-    border: 1px solid #444;
-    color: #e0e0e0;
-}
-
-.contact button {
-    background: #1f1f1f;
-    color: #e0e0e0;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.contact button:hover {
-    background: #333;
+.about p {
+    font-size: 1.1em;
 }
 
 /* Footer */
@@ -138,4 +134,31 @@ footer {
     color: #e0e0e0;
     padding: 1em 0;
     text-align: center;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 90%;
+    }
 }
